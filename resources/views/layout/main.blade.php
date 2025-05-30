@@ -77,9 +77,12 @@
 
     @yield('content')
 
+    {{--
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6keyq49JZ2zP+XEMK9NhE3MnT1+UaVQsELTnNNP54E9U0lzT6yR"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> --}}
+    @stack('scripts')
+
 </body>
 
 </html>

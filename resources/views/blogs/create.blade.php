@@ -40,7 +40,7 @@
 @section('content')
     <div class="container create-blog-container">
         <h2 class="text-center mb-4 text-primary fw-bold">Create a New Blog</h2>
-        <form action="{{route("blogs.store")}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">

@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,7 +12,8 @@ class CreateBlogModelsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('desc');
-            $table->string('img')->nullable();
+            $table->string('img');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

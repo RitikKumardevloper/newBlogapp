@@ -4,7 +4,7 @@
     <div class="container my-5">
         <h2 class="text-center text-primary fw-bold mb-4">Edit Blog</h2>
 
-        <form action="{{ route('blogs.update', $blog->id) }}" method="POST">
+        <form action="{{ route('blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
 
@@ -15,12 +15,15 @@
             </div>
 
             <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea name="desc" id="description" class="form-control" rows="5"
-                    required>{{ old('description', $blog->desc) }}</textarea>
+                <label for="desc" class="form-label">Description</label>
+                <textarea name="desc" id="desc" class="form-control" rows="5"
+                    required>{{ old('desc', $blog->desc) }}</textarea>
             </div>
 
-            <!-- Add more fields as needed -->
+            <div class="mb-3">
+                <label for="img" class="form-label">Image (Leave blank to keep current)</label>
+                <input type="file" name="img" id="img" class="form-control">
+            </div>
 
             <button type="submit" class="btn btn-primary">Update Blog</button>
         </form>

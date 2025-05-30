@@ -19,7 +19,7 @@
 @section('content')
     <div class="container my-5">
         <div class="text-end mb-4">
-            <a href="{{ url('/blogs/create') }}" class="btn read-more-btn">+ Add New Blog</a>
+            <a href="{{ route('blogs.create') }}" class="btn read-more-btn">+ Add New Blog</a>
         </div>
         <h2 class="text-center text-primary fw-bold mb-4">My Blogs</h2>
 
